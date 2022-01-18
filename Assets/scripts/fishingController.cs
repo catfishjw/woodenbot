@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class fishingController : MonoBehaviour
 {
-    public GameObject pond;
-    public GameObject fishPrefabs;
-    public GameObject mainCamera;
-    
-    public int difficulty = 1;
-
     // Start is called before the first frame update
     void Start()
     {
