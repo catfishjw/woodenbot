@@ -13,6 +13,8 @@ public class fishingController : MonoBehaviour
     public GameObject myPrefab;
     public GameObject canvasObject;
 
+    public bool running = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,10 @@ public class fishingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!running)
+        {
+            CancelInvoke();
+        }
     }
 
     void Spawn()
