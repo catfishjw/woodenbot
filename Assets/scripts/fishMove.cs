@@ -7,39 +7,59 @@ public class fishMove : MonoBehaviour
 {
     public fishingController fishingController;
 
-    // Minimum and maximum values for the transition.
     private RectTransform phishT;
     private Rigidbody phishR;
-    private IEnumerator coroutine;
-    float minimum = 10.0f;
-    float maximum = 20.0f;
 
     float forcex;
     float forcey;
 
+    float changetime = 1f;
+    float duration;
+    float lastMove;
+
+    Rect screenRect;
+    bool onScreen;
+
     void Start()
     {
-        // Make a note of the time the script started.
         phishT = GetComponent<RectTransform>();
         phishR = GetComponent<Rigidbody>();
-        coroutine = Move(.75f);
-        StartCoroutine(coroutine);
-    }
-
-    private IEnumerator Move(float waitTime)
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(waitTime);
-            forcex = Random.Range(-150, 150);
-            forcey = Random.Range(-150, 150);
-            phishR.AddForce(new Vector3(1 * forcex, 1 * forcey), ForceMode.Impulse);
-            Debug.Log("why");
-        }
+        screenRect = new Rect(0f, 0f, Screen.width, Screen.height);
     }
 
     void Update()
     {
+        if (OnScreen())
+        {
+            duration = Time.time - lastMove;
+            if (duration >= changetime)
+            {
+                forcex = Random.Range(-150, 150);
+                forcey = Random.Range(-150, 150);
+                phishR.AddForce(new Vector3(1 * forcex, 1 * forcey), ForceMode.Impulse);
+                lastMove = Time.time;
+            }
+        }
+        else
+        {
+            phishR.velocity = -phishR.velocity;
+        }
+    }
 
+    bool OnScreen()
+    {
+        Vector3[] corners = new Vector3[4];
+        phishT.GetWorldCorners(corners);
+
+        onScreen = true;
+
+        foreach (Vector3 corner in corners)
+        {
+            if (!screenRect.Contains(corner))
+            {
+                onScreen = false;
+            }
+        }
+        return onScreen;
     }
 }
