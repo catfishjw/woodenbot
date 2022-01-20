@@ -19,6 +19,6 @@ public class playerController : MonoBehaviour
         float h = Input.GetAxis("Horizontal") * Time.deltaTime;
         float v = Input.GetAxis("Vertical") * Time.deltaTime;
 
-        gameObject.transform.position = new Vector3(transform.position.x + (h * speed), transform.position.y, transform.position.z + (v * speed));
+        transform.position = new Vector3(transform.position.x + (h * speed), transform.position.y, transform.position.z + (v * speed));
     }
 }
