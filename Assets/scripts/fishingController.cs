@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class fishingController : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class fishingController : MonoBehaviour
 
     public float spawnTime = 5f;
     public float spawnDelay = 3f;
-    public GameObject myPrefab;
+    public TextMeshProUGUI myPrefab;
     public GameObject canvasObject;
 
     public bool running = false;
@@ -35,7 +36,15 @@ public class fishingController : MonoBehaviour
         // Instantiate a random prefab
         int spawnX = Random.Range(-69, 600);
         int spawnY = Random.Range(0, 560);
-        GameObject childObject = Instantiate(myPrefab, new Vector3(spawnX, spawnY, 0), transform.rotation) as GameObject;
+        TextMeshProUGUI childObject = Instantiate(myPrefab, new Vector3(spawnX, spawnY, 0), transform.rotation);
         childObject.transform.parent = canvasObject.transform;
+        childObject.text = buzzwords[Random.Range(0, buzzwords.Length)];
+    }
+
+    public void startFishing()
+    {
+        canvasObject.SetActive(true);
+        
+
     }
 }
