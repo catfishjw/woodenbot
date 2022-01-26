@@ -37,7 +37,7 @@ public class fishingController : MonoBehaviour
         int spawnX = Random.Range(-69, 600);
         int spawnY = Random.Range(0, 560);
         TextMeshProUGUI childObject = Instantiate(myPrefab, new Vector3(spawnX, spawnY, 0), transform.rotation);
-        childObject.transform.parent = canvasObject.transform;
+        childObject.transform.SetParent(canvasObject.transform);
         childObject.text = buzzwords[Random.Range(0, buzzwords.Length)];
     }
 
