@@ -44,7 +44,5 @@ public class fishingController : MonoBehaviour
     public void startFishing()
     {
         canvasObject.SetActive(true);
-        
-
     }
 }
