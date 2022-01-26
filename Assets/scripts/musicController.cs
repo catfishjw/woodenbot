@@ -23,8 +23,18 @@ public class musicController : MonoBehaviour
     //an AudioSource attached to this GameObject that will play the music.
     public AudioSource musicSource;
 
+    
     //The offset to the first beat of the song in seconds
     public float firstBeatOffset;
+
+    int nextIndex = 0;
+
+
+    float[] notes;
+
+    public int beatsShownInAdvance;
+
+    public int points;
 
     // Start is called before the first frame update
     void Start()
@@ -50,5 +60,14 @@ public class musicController : MonoBehaviour
 
         //determine how many beats since the song started
         songPositionInBeats = songPosition / secPerBeat;
+
+        if (nextIndex < notes.Length && notes[nextIndex] < songPositionInBeats + beatsShownInAdvance)
+        {
+            //Instantiate( /* Music Note Prefab */ );
+
+            //initialize the fields of the music note
+
+            nextIndex++;
+        }
     }
 }
