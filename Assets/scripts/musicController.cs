@@ -60,14 +60,15 @@ public class musicController : MonoBehaviour
 
         //determine how many beats since the song started
         songPositionInBeats = songPosition / secPerBeat;
-
+        /*
         if (nextIndex < notes.Length && notes[nextIndex] < songPositionInBeats + beatsShownInAdvance)
         {
-            //Instantiate( /* Music Note Prefab */ );
+            //Instantiate( /* Music Note Prefab  );
 
             //initialize the fields of the music note
 
             nextIndex++;
         }
+        */
     }
 }

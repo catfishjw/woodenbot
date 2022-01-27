@@ -9,10 +9,11 @@ public class musicKeys : MonoBehaviour
 
     public Material defaultMaterial;
     public Material pressedMaterial;
+    Renderer textureChanger;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Renderer textureChanger = gameObject.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -20,14 +21,15 @@ public class musicKeys : MonoBehaviour
     {
         if (Input.GetKeyDown(keyToPress))
         {
-            StartCoroutine(collisionToggle());
+            StartCoroutine(CollisionToggle());
         }
     }
-    public IEnumerator collisionToggle()
+    public IEnumerator CollisionToggle()
     {
         Collider.enabled = true;
-
+        textureChanger.material.SetColor("_Color", Color.red);
         yield return new WaitForSeconds(0.05f);
+        textureChanger.material.SetColor("_Color", Color.blue);
         Collider.enabled = false;
 
     }

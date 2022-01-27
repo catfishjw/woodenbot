@@ -7809,7 +7809,7 @@ GameObject:
   - component: {fileID: 506787503}
   - component: {fileID: 506787507}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: Down Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7847,7 +7847,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a31260289ae1fe0499eb7e03237fa6c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7905,8 +7905,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyToPress: 274
   Collider: {fileID: 506787503}
-  defaultMaterial: {fileID: 0}
-  pressedMaterial: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: a31260289ae1fe0499eb7e03237fa6c3, type: 2}
+  pressedMaterial: {fileID: 2100000, guid: 4905b9635b5a55c4bb4940eedd670b2b, type: 2}
 --- !u!1 &545073588
 GameObject:
   m_ObjectHideFlags: 0
@@ -7921,7 +7921,7 @@ GameObject:
   - component: {fileID: 545073589}
   - component: {fileID: 545073593}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Left Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7959,7 +7959,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a31260289ae1fe0499eb7e03237fa6c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8017,8 +8017,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyToPress: 276
   Collider: {fileID: 545073589}
-  defaultMaterial: {fileID: 0}
-  pressedMaterial: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: a31260289ae1fe0499eb7e03237fa6c3, type: 2}
+  pressedMaterial: {fileID: 2100000, guid: 4905b9635b5a55c4bb4940eedd670b2b, type: 2}
 --- !u!43 &691630894
 Mesh:
   m_ObjectHideFlags: 0
@@ -13226,7 +13226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1316058255
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13990,7 +13990,7 @@ GameObject:
   - component: {fileID: 1650687499}
   - component: {fileID: 1650687503}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Right Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14028,7 +14028,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a31260289ae1fe0499eb7e03237fa6c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14086,8 +14086,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyToPress: 275
   Collider: {fileID: 1650687499}
-  defaultMaterial: {fileID: 0}
-  pressedMaterial: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: a31260289ae1fe0499eb7e03237fa6c3, type: 2}
+  pressedMaterial: {fileID: 2100000, guid: 4905b9635b5a55c4bb4940eedd670b2b, type: 2}
 --- !u!43 &1658715753
 Mesh:
   m_ObjectHideFlags: 0
@@ -14594,7 +14594,7 @@ GameObject:
   - component: {fileID: 1761193784}
   - component: {fileID: 1761193788}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Up Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14632,7 +14632,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a31260289ae1fe0499eb7e03237fa6c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14690,8 +14690,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyToPress: 273
   Collider: {fileID: 1761193784}
-  defaultMaterial: {fileID: 0}
-  pressedMaterial: {fileID: 0}
+  defaultMaterial: {fileID: 2100000, guid: a31260289ae1fe0499eb7e03237fa6c3, type: 2}
+  pressedMaterial: {fileID: 2100000, guid: 4905b9635b5a55c4bb4940eedd670b2b, type: 2}
 --- !u!43 &1774569063
 Mesh:
   m_ObjectHideFlags: 0
