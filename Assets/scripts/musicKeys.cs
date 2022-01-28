@@ -29,7 +29,7 @@ public class musicKeys : MonoBehaviour
         Renderer textureChanger = gameObject.GetComponent<Renderer>();
         Collider.enabled = true;
         textureChanger.material.SetColor("_Color", Color.red);
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.15f);
         textureChanger.material.SetColor("_Color", Color.blue);
         Collider.enabled = false;
 

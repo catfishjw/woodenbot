@@ -30,7 +30,7 @@ public class musicController : MonoBehaviour
     int nextIndex = 0;
 
 
-    private float[] notes = [1,2,3,4,5];
+    private float[] notes = new float[] {1,2,3,4,5,6,7,8,9,10};
 
     public int beatsShownInAdvance;
 
@@ -59,7 +59,7 @@ public class musicController : MonoBehaviour
     {
         //determine how many seconds since the song started
         songPosition = (float)(AudioSettings.dspTime - dspSongTime - firstBeatOffset);
-
+        Debug.Log(points);
         //determine how many beats since the song started
         songPositionInBeats = songPosition / secPerBeat;
         

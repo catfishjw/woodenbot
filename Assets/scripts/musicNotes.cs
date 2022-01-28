@@ -18,8 +18,20 @@ public class musicNotes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float BeatsShownInAdvance = music.beatsShownInAdvance;
-        float beatOfThisNote = music.songPositionInBeats + BeatsShownInAdvance;
+        startList[0] = GameObject.Find("LeftSpawn");
+        startList[1] = GameObject.Find("RightSpawn");
+        startList[2] = GameObject.Find("UpSpawn");
+        startList[3] = GameObject.Find("DownSpawn");
+
+        endList[0] = GameObject.Find("Left Key");
+        endList[1] = GameObject.Find("Right Key");
+        endList[2] = GameObject.Find("Up Key");
+        endList[3] = GameObject.Find("Down Key");
+
+        music = GameObject.Find("rhythmController").GetComponent<musicController>();
+
+        BeatsShownInAdvance = music.beatsShownInAdvance;
+        beatOfThisNote = music.songPositionInBeats + BeatsShownInAdvance;
 
         int randindex = Random.Range(0, 3);
         SpawnPos = startList[randindex];
@@ -36,9 +48,9 @@ public class musicNotes : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision other)
     {
-        music.points = music.points + 100;
+        music.points += 100;
         Destroy(gameObject);
     }
     }
