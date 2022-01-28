@@ -26,6 +26,7 @@ public class musicKeys : MonoBehaviour
     }
     public IEnumerator CollisionToggle()
     {
+        Renderer textureChanger = gameObject.GetComponent<Renderer>();
         Collider.enabled = true;
         textureChanger.material.SetColor("_Color", Color.red);
         yield return new WaitForSeconds(0.05f);

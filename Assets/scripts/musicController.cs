@@ -30,11 +30,13 @@ public class musicController : MonoBehaviour
     int nextIndex = 0;
 
 
-    float[] notes;
+    private float[] notes = [1,2,3,4,5];
 
     public int beatsShownInAdvance;
 
     public int points;
+
+    public GameObject notePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -60,15 +62,15 @@ public class musicController : MonoBehaviour
 
         //determine how many beats since the song started
         songPositionInBeats = songPosition / secPerBeat;
-        /*
+        
         if (nextIndex < notes.Length && notes[nextIndex] < songPositionInBeats + beatsShownInAdvance)
         {
-            //Instantiate( /* Music Note Prefab  );
+            Instantiate(notePrefab);
 
             //initialize the fields of the music note
 
             nextIndex++;
         }
-        */
+        
     }
 }

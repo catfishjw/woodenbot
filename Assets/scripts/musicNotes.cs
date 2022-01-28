@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class musicNotes : MonoBehaviour
 {
-    public GameObject SpawnPos;
-    public GameObject RemovePos;
+    private GameObject SpawnPos;
+    private GameObject RemovePos;
+
+    public GameObject[] startList;
+    public GameObject[] endList;
 
     public musicController music;
 
@@ -17,6 +20,10 @@ public class musicNotes : MonoBehaviour
     {
         float BeatsShownInAdvance = music.beatsShownInAdvance;
         float beatOfThisNote = music.songPositionInBeats + BeatsShownInAdvance;
+
+        int randindex = Random.Range(0, 3);
+        SpawnPos = startList[randindex];
+        RemovePos = endList[randindex];
     }
 
     // Update is called once per frame
