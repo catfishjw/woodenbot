@@ -51,6 +51,7 @@ public class musicNotes : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         music.points += 100;
+        Debug.Log(music.points);
         Destroy(gameObject);
     }
     }
