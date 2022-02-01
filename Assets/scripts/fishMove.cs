@@ -6,9 +6,11 @@ using TMPro;
 public class fishMove : MonoBehaviour
 {
     public fishingController fishingController;
+    public Canvas fishingCanvas;
 
     private RectTransform phishT;
     private Rigidbody phishR;
+    private RectTransform canvasT;
 
     float forcex;
     float forcey;
@@ -31,9 +33,12 @@ public class fishMove : MonoBehaviour
     {
         phishT = GetComponent<RectTransform>();
         phishR = GetComponent<Rigidbody>();
-        screenRect = new Rect(0f, 0f, Screen.width, Screen.height);
-        force = Random.Range(50, 200);
-        max = Random.Range(150, 350);
+        canvasT = fishingCanvas.GetComponent<RectTransform>();
+        Vector3[] corners = new Vector3[4];
+        canvasT.GetWorldCorners(corners);
+        screenRect = new Rect(corners[0].x, corners[0].y, canvasT.rect.width, canvasT.rect.height);
+        force = Random.Range(10, 20);
+        max = Random.Range(10, 35);
     }
 
     void Update()
