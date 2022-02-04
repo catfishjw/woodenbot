@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657993, g: 0.49641424, b: 0.57481825, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657993, g: 0.49641424, b: 0.5748182, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13878,7 +13878,7 @@ MonoBehaviour:
   spawnTime: 5
   spawnDelay: 3
   myPrefab: {fileID: 2139308398}
-  canvasObject: {fileID: 1573858576}
+  fishingCanvas: {fileID: 0}
   running: 1
 --- !u!4 &1299157691
 Transform:
@@ -13923,7 +13923,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 67e12e7ccdffd094faa9f76e5021303d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c9a0b6d4ba27f01439f207a70f4cfac8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.192
   m_Pitch: 1
@@ -14021,14 +14021,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b8e23f6a00a6040b316b14197d07ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songBpm: 153
+  songBpm: 206
   secPerBeat: 0
   songPosition: 0
   songPositionInBeats: 0
   dspSongTime: 0
   musicSource: {fileID: 1316058255}
   firstBeatOffset: 4
-  beatsShownInAdvance: 4
+  beatsShownInAdvance: 8
   points: 0
   notePrefab: {fileID: 1681327960781954956, guid: b7acf462e983c4a4193a11353172b328, type: 3}
 --- !u!4 &1316058257
@@ -26006,6 +26006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishingController: {fileID: 1299157690}
+  fishingCanvas: {fileID: 0}
 --- !u!114 &2139308396
 MonoBehaviour:
   m_ObjectHideFlags: 0
