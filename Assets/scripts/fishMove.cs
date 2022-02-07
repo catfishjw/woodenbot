@@ -18,7 +18,7 @@ public class fishMove : MonoBehaviour
     float changetime = 1f;
     float durationRand;
     float durationBounce;
-    float bounceGive = 0.15f;
+    float bounceGive = 0.1f;
     float lastBounce;
     float lastMove;
     float force;
