@@ -5,7 +5,7 @@ using UnityEngine;
 public class whacker : MonoBehaviour
 {
     public KeyCode keyToPress;
-    public keywhackController controller;
+    //public keywhackController controller;
     private bool spawning = false;
     public bool spawned = false;
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class whacker : MonoBehaviour
     {
         if (!spawning)
         {
-            StartCoroutine(startSpawn);
+            //StartCoroutine(startSpawn);
             spawning = true;
         }
         if (Input.GetKeyDown(keyToPress) && spawned)

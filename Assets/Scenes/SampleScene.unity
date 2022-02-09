@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657993, g: 0.49641424, b: 0.57481825, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657993, g: 0.49641424, b: 0.5748182, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14021,7 +14021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1299157690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14106,7 +14106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1316058255
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14117,7 +14117,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c9a0b6d4ba27f01439f207a70f4cfac8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 051d50a8bb6d3904ea8564c638138825, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.192
   m_Pitch: 1
@@ -14215,7 +14215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b8e23f6a00a6040b316b14197d07ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songBpm: 206
+  songBpm: 226
   secPerBeat: 0
   songPosition: 0
   songPositionInBeats: 0
@@ -26184,7 +26184,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -153, y: 52}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 345.85, y: 44.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2139308395
 MonoBehaviour:
