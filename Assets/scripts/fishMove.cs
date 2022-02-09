@@ -37,8 +37,8 @@ public class fishMove : MonoBehaviour
         Vector3[] corners = new Vector3[4];
         canvasT.GetWorldCorners(corners);
         screenRect = new Rect(corners[0].x, corners[0].y, canvasT.rect.width, canvasT.rect.height);
-        force = Random.Range(10, 20);
-        max = Random.Range(10, 35);
+        force = Random.Range(150, 200);
+        max = Random.Range(200, 300);
     }
 
     void Update()
@@ -92,9 +92,9 @@ public class fishMove : MonoBehaviour
     void Bounce(int corner)
     {
         lastBounce = Time.time;
-        float x = Random.Range(.75f,1);
-        float y = Random.Range(.75f,1);
-        float temp = 2;
+        int x = 1;
+        int y = 1;
+        float temp = 2.5f;
         float temp2 = 100f;
         Vector3 orginVelocity;
         switch (corner)
