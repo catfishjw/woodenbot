@@ -32,6 +32,6 @@ public class hookController : MonoBehaviour
 
         Vector3 targetPosition = new Vector3(transform.position.x + (cursorT.position.x - hookT.position.x), transform.position.y + (cursorT.position.y - hookT.position.y), transform.position.z);
 
-        transform.position = Vector3.Lerp(transform.position, targetPosition, .01f);
+        transform.position = Vector3.Lerp(transform.position, targetPosition, .05f);
     }
 }

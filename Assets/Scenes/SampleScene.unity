@@ -591,7 +591,7 @@ MonoBehaviour:
   - 'Use Strong Passwords '
   - Use Two-Factor or Multi-Factor Authentication
   - 'Learn about Phishing Scams '
-  - Protect Your Sensitive Personal Identifiable Information (PII)
+  - Protect Your Sensitive PII
   - Use Your Mobile Devices Securely
   - Backup Your Data Regularly
   - "Don\u2019t Use Public Wi-Fi "
@@ -2117,11 +2117,11 @@ MonoBehaviour:
   m_text: "When you go to open your email today, you find it flooded with phishing
     emails. \nAll of these emails contain hyperlinks that will download malware onto
     your computer if you click on them. In this game, your \u201Cphishing\u201D hook
-    will follow your cursor, fishing any email it crosses over out of your inbox.\n
-    Fish as many dangerous links out of your inbox while avoiding legitimate black
-    emails as you can. But careful, the black text will remain in your inbox even
-    as new ones spawn, making it harder and harder to avoid them. Once you fish three
-    legitimate emails, the game ends. "
+    will follow your cursor, fishing any email it crosses over out of your inbox.\nFish
+    as many dangerous links out of your inbox while avoiding legitimate black emails
+    as you can. But careful, the black text will remain in your inbox even as new
+    ones spawn, making it harder and harder to avoid them. Once you fish three legitimate
+    emails, the game ends. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3827,7 +3827,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 959a6e66fd6e65340b95343fefe555de, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.47
   m_Pitch: 1
   Loop: 1
   Mute: 0
