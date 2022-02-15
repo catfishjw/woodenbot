@@ -12,7 +12,7 @@ public class transitionController : MonoBehaviour
     public GameObject transitionCanvas;
     public TextMeshProUGUI loadText;
 
-    private float loadTime = 4f;
+    private float loadTime = 8f;
     public string[] tipText;
 
     // Start is called before the first frame update
