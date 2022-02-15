@@ -9,12 +9,14 @@ public class rodController : MonoBehaviour
 
     public GameObject hook;
     public GameObject canvas;
-    GameObject child;
+
+    public Transform hookT;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        hook.SetActive(false);
+        hookT = hook.GetComponent< Transform>();
     }
 
     // Update is called once per frame
@@ -24,13 +26,12 @@ public class rodController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Destroy(child);
-            child = Instantiate(hook, Input.mousePosition, transform.rotation);
-            child.transform.SetParent(canvas.transform);
+            hook.SetActive(true);
+            
         }
-        if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonUp(0))
         {
-            Destroy(child);
+            hook.SetActive(false);
         }
     }
 }

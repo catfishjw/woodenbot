@@ -7,8 +7,10 @@ public class fishMove : MonoBehaviour
 {
     public fishingController fishingController;
     public Canvas fishingCanvas;
+    public GameObject hook;
 
     private RectTransform phishT;
+    private BoxCollider phishBox;
     private Rigidbody phishR;
     private RectTransform canvasT;
 
@@ -29,10 +31,16 @@ public class fishMove : MonoBehaviour
 
     int cornerNumber;
 
+    public bool bad;
+
     void Start()
     {
+        fishingController = GameObject.Find("fishingController").GetComponent<fishingController>();
+        fishingCanvas = GameObject.Find("fish").GetComponent<Canvas>();
+        hook = GameObject.Find("hook");
         phishT = GetComponent<RectTransform>();
         phishR = GetComponent<Rigidbody>();
+        phishBox = GetComponent<BoxCollider>();
         canvasT = fishingCanvas.GetComponent<RectTransform>();
         Vector3[] corners = new Vector3[4];
         canvasT.GetWorldCorners(corners);
@@ -41,9 +49,15 @@ public class fishMove : MonoBehaviour
         max = Random.Range(200, 300);
     }
 
+
     void Update()
     {
         durationBounce = Time.time - lastBounce;
+
+        Vector3[] corner = new Vector3[4];
+        phishT.GetWorldCorners(corner);
+        phishBox.size = new Vector3(corner[3].x - corner[0].x, corner[1].y - corner[0].y, 1);
+
         if (!(OnScreen() == -1) && durationBounce > bounceGive)
         {
             Bounce(OnScreen());
@@ -124,7 +138,23 @@ public class fishMove : MonoBehaviour
 
     void Bounce2(Vector3 orginVelocity)
     {
-        //orginVelocity.Normalize();
         phishR.AddForce(orginVelocity, ForceMode.Impulse);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "hook")
+        {
+            if (bad)
+            {
+                fishingController.IncreaseScore();
+            }
+            else
+            {
+                fishingController.DecreaseLife();
+            }
+
+            Destroy(gameObject);
+        }
     }
 }
