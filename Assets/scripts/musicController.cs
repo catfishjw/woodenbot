@@ -63,6 +63,7 @@ public class musicController : MonoBehaviour
         dspSongTime = (float)AudioSettings.dspTime;
 
         //Start the music
+        musicEnd.SetActive(false);
         musicSource.Play();
     }
 

@@ -8,7 +8,7 @@ public class menuController : MonoBehaviour
     public GameObject beatRules;
     public GameObject menuCanvas;
 
-    void Start()
+    void OnEnable()
     {
         menuCanvas.SetActive(true);
         beatRules.SetActive(false);
