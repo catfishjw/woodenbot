@@ -14,6 +14,7 @@ public class musicKeys : MonoBehaviour
     void Start()
     {
         Renderer textureChanger = gameObject.GetComponent<Renderer>();
+        textureChanger.material.color = new Color32(67, 209, 197, 255);
     }
 
     // Update is called once per frame
@@ -28,9 +29,9 @@ public class musicKeys : MonoBehaviour
     {
         Renderer textureChanger = gameObject.GetComponent<Renderer>();
         Collider.enabled = true;
-        textureChanger.material.SetColor("_Color", Color.red);
+        textureChanger.material.SetColor("_Color", Color.green);
         yield return new WaitForSeconds(0.15f);
-        textureChanger.material.SetColor("_Color", Color.blue);
+        textureChanger.material.color = new Color32(67, 209, 197, 255);
         Collider.enabled = false;
 
     }

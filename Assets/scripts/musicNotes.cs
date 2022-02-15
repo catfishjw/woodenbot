@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class musicNotes : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class musicNotes : MonoBehaviour
     float BeatsShownInAdvance;
     float beatOfThisNote;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +52,8 @@ public class musicNotes : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
-        music.points += 100;
+        music.points += 1;
+        music.ScoreText.text = "Score: " + music.points;
         Debug.Log(music.points);
         Destroy(gameObject);
     }
