@@ -39,6 +39,8 @@ public class fishingController : MonoBehaviour
 
         scoreText.text = "Score: 0";
         lifeText.text = "Lives: 3";
+
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -97,6 +99,7 @@ public class fishingController : MonoBehaviour
             fishingCanvas.SetActive(false);
             fishingEnd.SetActive(true);
             finalScoreText.text = "Score: " + scoreInt;
+            Cursor.visible = true;
         }
     }
 }

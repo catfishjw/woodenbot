@@ -15,7 +15,7 @@ public class rodController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hook.SetActive(false);
+        hook.SetActive(true);
         hookT = hook.GetComponent< Transform>();
     }
 
@@ -23,15 +23,5 @@ public class rodController : MonoBehaviour
     void Update()
     {
         GetComponent<Transform>().position = new Vector2(Input.mousePosition.x - offsetx, Input.mousePosition.y - offsety);
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            hook.SetActive(true);
-            
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            hook.SetActive(false);
-        }
     }
 }
